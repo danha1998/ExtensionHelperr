@@ -3,7 +3,7 @@ import SwiftUI
 @available(macOS 10.15, *)
 @available(iOS 14.0, *)
 public struct OneView: View {
-    public init(whenComplete: () -> ()) {
+    public init(whenComplete: @escaping () -> ()) {
         self.whenComplete = whenComplete
     }
     
@@ -70,7 +70,7 @@ public struct OneView: View {
                         Spacer()
                     }.padding(10)
                         .foregroundColor(.white)
-                        .background(Color(uiColor: UIColor.blue))
+                        .background(Color.blue)
                         .cornerRadius(5)
                     
                 }
