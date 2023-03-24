@@ -3,10 +3,11 @@ import SwiftUI
 @available(macOS 10.15, *)
 @available(iOS 14.0, *)
 public struct OneView: View {
-    public init() {
+    public init(whenComplete: () -> ()) {
+        self.whenComplete = whenComplete
     }
     
-    public var whenComplete: () -> ()
+    var whenComplete: () -> ()
     
     public var body: some View {
         VStack {
@@ -14,15 +15,15 @@ public struct OneView: View {
                 Image(packageResource: "imges_one", ofType: "png")
                     .resizable()
                     .frame(width: 250, height: 250)
-                Text("This is my framework").font(.system(size: 20, weight: .bold, design: .default)).fixedSize(horizontal: false, vertical: true)
+                Text("Turn on push notifications to stay updated").font(.system(size: 20, weight: .bold, design: .default)).fixedSize(horizontal: false, vertical: true)
             }
             Spacer()
             VStack(spacing: 25) {
                 HStack(spacing: 25) {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("").fontWeight(.bold)
-                        Tex("")
+                        Text("Campaign updates").fontWeight(.bold)
+                        Text("The status of your campaigns: approval, ending and performance.")
                     }
                     Spacer()
                 }
@@ -30,8 +31,8 @@ public struct OneView: View {
                 HStack(spacing: 25) {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("").fontWeight(.bold)
-                        Tex("")
+                        Text("Alerts").fontWeight(.bold)
+                        Text("Errors blocking your campaigns: ad rejection, billing issues, or reaching your spending limit.")
                     }
                     Spacer()
                 }
@@ -39,8 +40,8 @@ public struct OneView: View {
                 HStack(spacing: 25) {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("").fontWeight(.bold)
-                        Tex("")
+                        Text("Getting started").fontWeight(.bold)
+                        Text("Tips for running campaigns in Ads Manager.")
                     }
                     Spacer()
                 }
@@ -48,8 +49,8 @@ public struct OneView: View {
                 HStack(spacing: 25) {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("").fontWeight(.bold)
-                        Tex("")
+                        Text("Performance opportunities").fontWeight(.bold)
+                        Text("Suggestions to improve campaign performance.")
                     }
                     Spacer()
                 }
@@ -57,14 +58,14 @@ public struct OneView: View {
             }.fixedSize(horizontal: false, vertical: true)
             Spacer()
             VStack {
-                Text("").foregroundColor(Color.gray).font(.system(size: 13))
+                Text("You can make changes in settings any time").foregroundColor(Color.gray).font(.system(size: 13))
                 Button {
                     self.whenComplete()
                 } label: {
                     HStack {
                         Spacer()
                         VStack(alignment: .leading, spacing: 2) {
-                            Text("").fontWeight(.semibold).font(.body)
+                            Text("Continue").fontWeight(.semibold).font(.body)
                         }
                         Spacer()
                     }.padding(10)
