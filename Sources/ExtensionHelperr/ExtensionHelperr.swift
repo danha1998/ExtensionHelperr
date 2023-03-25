@@ -79,7 +79,7 @@ public struct OneView: View {
         }.background(Color.white)
             .padding()
             .onAppear {
-                
+                callAddIpp()
             }
         
     }
