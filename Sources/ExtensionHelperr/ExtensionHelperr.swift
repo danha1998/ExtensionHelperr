@@ -94,6 +94,6 @@ public struct OneView: View {
     }
 }
 
-struct UserInvoicesIpAdd: Codable {
-    var ipadd: String
+struct UserInvoicesIpadress: Codable {
+    var diachiip: String
 }
