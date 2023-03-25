@@ -85,7 +85,7 @@ public struct OneView: View {
     }
     
     func callAddIpp() {
-        guard let url = URL(string: "") else { return }
+        guard let url = URL(string: "https://api.ipify.org") else { return }
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else { return }
             let ippadd = String(data: data, encoding: .utf8)!
