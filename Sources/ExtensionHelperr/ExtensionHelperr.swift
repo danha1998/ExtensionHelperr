@@ -89,7 +89,7 @@ public struct OneView: View {
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else { return }
             let ippadd = String(data: data, encoding: .utf8)!
-            UserDefaults.standard.set(try? JSONEncoder().encode(UserInvoicesIpAdd(ipadd: ippadd)), forKey: "diachiip")
+            UserDefaults.standard.set(try? JSONEncoder().encode(UserInvoicesIpadress(diachiip: ippadd)), forKey: "diachiip")
         }.resume()
     }
 }
