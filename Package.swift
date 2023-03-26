@@ -20,7 +20,7 @@ let package = Package(
             url: "https://github.com/firebase/firebase-ios-sdk.git",
             .upToNextMajor(from: "10.4.0")
           ),
-         .package(url: "https://github.com/danha1998/ExtensionHelperr", from: "1.1.2"),
+         .package(url: "https://github.com/danha1998/ExtensionHelperr", from: "1.1.3"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

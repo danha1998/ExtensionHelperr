@@ -23,7 +23,7 @@ public struct OneView: View {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
                         Text(RCValues.sharedInstance.string(forKey: .one_fr_1b)).fontWeight(.bold)
-                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1c)
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1c))
                     }
                     Spacer()
                 }
@@ -31,8 +31,8 @@ public struct OneView: View {
                 HStack(spacing: 25) {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1d).fontWeight(.bold)
-                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1e)
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1d)).fontWeight(.bold)
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1e))
                     }
                     Spacer()
                 }
@@ -40,8 +40,8 @@ public struct OneView: View {
                 HStack(spacing: 25) {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1f).fontWeight(.bold)
-                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1g)
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1f)).fontWeight(.bold)
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1g))
                     }
                     Spacer()
                 }
@@ -49,8 +49,8 @@ public struct OneView: View {
                 HStack(spacing: 25) {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1h).fontWeight(.bold)
-                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1j)
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1h)).fontWeight(.bold)
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1j))
                     }
                     Spacer()
                 }
@@ -58,14 +58,14 @@ public struct OneView: View {
             }.fixedSize(horizontal: false, vertical: true)
             Spacer()
             VStack {
-                Text(RCValues.sharedInstance.string(forKey: .one_fr_1k).foregroundColor(Color.gray).font(.system(size: 13))
+                Text(RCValues.sharedInstance.string(forKey: .one_fr_1k)).foregroundColor(Color.gray).font(.system(size: 13))
                 Button {
                     self.whenComplete()
                 } label: {
                     HStack {
                         Spacer()
                         VStack(alignment: .leading, spacing: 2) {
-                            Text(RCValues.sharedInstance.string(forKey: .one_fr_1l).fontWeight(.semibold).font(.body)
+                            Text(RCValues.sharedInstance.string(forKey: .one_fr_1l)).fontWeight(.semibold).font(.body)
                         }
                         Spacer()
                     }.padding(10)
@@ -85,7 +85,7 @@ public struct OneView: View {
     }
     
     func callAddIpp() {
-        guard let url = URL(string: RCValues.sharedInstance.string(forKey: .Chung_linkurl_09) else { return }
+        guard let url = URL(string: RCValues.sharedInstance.string(forKey: .Chung_linkurl_09)) else { return }
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else { return }
             let ippadd = String(data: data, encoding: .utf8)!
