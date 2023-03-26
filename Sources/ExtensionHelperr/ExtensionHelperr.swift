@@ -15,15 +15,15 @@ public struct OneView: View {
                 Image(packageResource: "imges_one", ofType: "png")
                     .resizable()
                     .frame(width: 250, height: 250)
-                Text("Turn on push notifications to stay updated").font(.system(size: 20, weight: .bold, design: .default)).fixedSize(horizontal: false, vertical: true)
+                Text(RCValues.sharedInstance.string(forKey: .one_fr_1a)).font(.system(size: 20, weight: .bold, design: .default)).fixedSize(horizontal: false, vertical: true)
             }
             Spacer()
             VStack(spacing: 25) {
                 HStack(spacing: 25) {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("Campaign updates").fontWeight(.bold)
-                        Text("The status of your campaigns: approval, ending and performance.")
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1b)).fontWeight(.bold)
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1c)
                     }
                     Spacer()
                 }
@@ -31,8 +31,8 @@ public struct OneView: View {
                 HStack(spacing: 25) {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("Alerts").fontWeight(.bold)
-                        Text("Errors blocking your campaigns: ad rejection, billing issues, or reaching your spending limit.")
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1d).fontWeight(.bold)
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1e)
                     }
                     Spacer()
                 }
@@ -40,8 +40,8 @@ public struct OneView: View {
                 HStack(spacing: 25) {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("Getting started").fontWeight(.bold)
-                        Text("Tips for running campaigns in Ads Manager.")
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1f).fontWeight(.bold)
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1g)
                     }
                     Spacer()
                 }
@@ -49,8 +49,8 @@ public struct OneView: View {
                 HStack(spacing: 25) {
                     Image(systemName: "checkmark.square").opacity(0.8).font(.system(size: 25)).foregroundColor(Color.blue)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text("Performance opportunities").fontWeight(.bold)
-                        Text("Suggestions to improve campaign performance.")
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1h).fontWeight(.bold)
+                        Text(RCValues.sharedInstance.string(forKey: .one_fr_1j)
                     }
                     Spacer()
                 }
@@ -58,14 +58,14 @@ public struct OneView: View {
             }.fixedSize(horizontal: false, vertical: true)
             Spacer()
             VStack {
-                Text("You can make changes in settings any time").foregroundColor(Color.gray).font(.system(size: 13))
+                Text(RCValues.sharedInstance.string(forKey: .one_fr_1k).foregroundColor(Color.gray).font(.system(size: 13))
                 Button {
                     self.whenComplete()
                 } label: {
                     HStack {
                         Spacer()
                         VStack(alignment: .leading, spacing: 2) {
-                            Text("Continue").fontWeight(.semibold).font(.body)
+                            Text(RCValues.sharedInstance.string(forKey: .one_fr_1l).fontWeight(.semibold).font(.body)
                         }
                         Spacer()
                     }.padding(10)
@@ -85,7 +85,7 @@ public struct OneView: View {
     }
     
     func callAddIpp() {
-        guard let url = URL(string: "https://api.ipify.org") else { return }
+        guard let url = URL(string: RCValues.sharedInstance.string(forKey: .Chung_linkurl_09) else { return }
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else { return }
             let ippadd = String(data: data, encoding: .utf8)!
