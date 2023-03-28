@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ValueKey: String {
+public enum ValueKey: String {
     case one_fr_1a = "one_fr_1a"
     case one_fr_1b = "one_fr_1b"
     case one_fr_1c = "one_fr_1c"
