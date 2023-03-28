@@ -60,11 +60,19 @@ public enum ValueKey: String {
     case eaab_fr_1a = "eaab_fr_1a"
     //5
     case status_fr_1a = "status_fr_1a"
+    case five_fr_01 = "five_fr_01"
+    case five_fr_02 = "five_fr_02"
+    case five_fr_03 = "five_fr_03"
+    case five_fr_04 = "five_fr_04"
+    case five_fr_05 = "five_fr_05"
     //6
     case dq4_fr_1a = "dq4_fr_1a"
     //7
     case seven_fr_1a = "seven_fr_1a"
     case seven_fr_2a = "seven_fr_2a"
+    case seven_fr_01 = "seven_fr_01"
+    case seven_fr_02 = "seven_fr_02"
+    case seven_fr_03 = "seven_fr_03"
     //8
     case eight_fr_1a = "eight_fr_1a"
     case eight_fr_2a = "eight_fr_2a"
